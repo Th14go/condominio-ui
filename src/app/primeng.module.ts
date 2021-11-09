@@ -5,6 +5,8 @@ import {CommonModule } from '@angular/common';
 import {InputTextModule } from 'primeng/inputtext';
 import {CardModule } from 'primeng/card';
 import {ButtonModule } from 'primeng/button';
+import {SidebarModule} from 'primeng/sidebar';
+import {AccordionModule} from 'primeng/accordion';
 
 @NgModule({
 
@@ -13,7 +15,9 @@ import {ButtonModule } from 'primeng/button';
     FormsModule,
     InputTextModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    SidebarModule,
+    AccordionModule
   ]
 })
 export class PrimengModule { }
