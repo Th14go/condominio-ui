@@ -3,3 +3,12 @@
 .p-button { 
     border-radius: 15px;
 }
+
+h4 {
+    color: #6c757d;
+    font-family: helvetica, arial, courier;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-top: 0.875rem;
+}

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { PrimengModule } from '../primeng.module';
 
 import { LayoutComponent } from './layout/layout.component';
@@ -13,7 +14,8 @@ import { PaginaNaoEncontradaComponent } from './layout/pagina-nao-encontrada/pag
         PaginaNaoEncontradaComponent
     ],
     imports: [
-        PrimengModule
+        PrimengModule,
+        RouterModule
     ],
     providers: [],
     exports: [
