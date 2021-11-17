@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CondominiosService } from '../condominios.service';
+
 @Component({
   selector: 'app-condominios-lista',
   templateUrl: './condominios-lista.component.html',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CondominiosListaComponent implements OnInit {
 
-  constructor() { }
+  condominios = [];
 
-  ngOnInit(): void {
+  constructor(
+    private condService: CondominiosService
+  ) { }
+
+  ngOnInit() {
+     this.listaCondominios();
+   }
+
+  listaCondominios(){
+    this.condService.listar()
+    .then(obj => {
+      this.condominios = obj;
+    })
   }
-
 }

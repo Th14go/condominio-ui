@@ -1,12 +1,53 @@
-<p-card>
-    <h4>CADASTRO DE CONDOMÍNIO</h4>
-    <button pButton pRipple type="button" class="p-button-raised btn-menu" icon="pi pi-search" label="Consulta" routerLink="/condominios"></button>
-
-    <div class="p-grid p-fluid">
+<p-card class="p-mt-5 p-mx-3">
+    <h4>Cadastro de Condomínio</h4>
+    <div class="p-d-flex p-jc-between">
+      <div>
+        <button pButton pRipple type="button" class="p-button-raised" icon="pi pi-caret-left" label="Voltar" routerLink="/condominios"></button>
+      </div>
+    </div>
+    <br>
+<form #formCond="ngForm" autocomplete="off" (ngSubmit)="salvar(formCond)">
+    <div class="p-grid">
         <div class="p-col-12 p-md-6 p-lg-3">
-            <input type="text" pInputText />
+            <h6> <span class="obrigatorio">*</span>Cnpj</h6>
+            <input pInputText name="cnpj" [(ngModel)]="condominio.cnpj" #cnpj="ngModel" type="text"/>
+        </div>
+
+        <div class="p-col-12 p-md-6 p-lg-3">
+            <h6> <span class="obrigatorio">*</span>Cep</h6>
+            <input pInputText name="cep" [(ngModel)]="condominio.cep" #cep="ngModel" type="text"/>
+        </div>
+
+        <div class="p-col-12 p-md-6 p-lg-3">
+            <h6> <span class="obrigatorio">*</span>Logradouro</h6>
+            <input pInputText name="logradouro" [(ngModel)]="condominio.logradouro" #logradouro="ngModel" type="text"/>
+        </div>
+
+        <div class="p-col-12 p-md-6 p-lg-3">
+            <h6> <span class="obrigatorio">*</span>Bairro</h6>
+            <input pInputText name="bairro" [(ngModel)]="condominio.bairro" #bairro="ngModel" type="text"/>
+        </div>
+
+        <div class="p-col-12 p-md-6 p-lg-3">
+            <h6> <span class="obrigatorio">*</span>Complemento</h6>
+            <input pInputText name="complemento" [(ngModel)]="condominio.complemento" #complemento="ngModel" type="text"/>
+        </div>
+
+        <div class="p-col-12 p-md-6 p-lg-3">
+            <h6> <span class="obrigatorio">*</span>Cidade</h6>
+            <input pInputText name="cidade" [(ngModel)]="condominio.cidade" #cidade="ngModel" type="text"/>
+        </div>
+
+        <div class="p-col-12 p-md-6 p-lg-3">
+            <h6> <span class="obrigatorio">*</span>Estado/Sigla</h6>
+            <input pInputText name="uf" [(ngModel)]="condominio.uf" #uf="ngModel" type="text"/>
         </div>
 
     </div>
-    
+    <div class="p-grid p-fluid p-justify-center">
+    <div class="p-col-12 p-md-6 p-lg-2">
+        <button pButton pRipple type="submit" label="Salvar" class="p-button-raised p-button-success"></button>
+    </div>
+    </div>
+</form>
 </p-card>

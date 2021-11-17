@@ -7,6 +7,7 @@ import {CardModule } from 'primeng/card';
 import {ButtonModule } from 'primeng/button';
 import {SidebarModule} from 'primeng/sidebar';
 import {AccordionModule} from 'primeng/accordion';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
 
@@ -17,7 +18,8 @@ import {AccordionModule} from 'primeng/accordion';
     CardModule,
     ButtonModule,
     SidebarModule,
-    AccordionModule
+    AccordionModule,
+    TableModule
   ]
 })
 export class PrimengModule { }
